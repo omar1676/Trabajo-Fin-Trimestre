@@ -1,0 +1,34 @@
+body{
+    background-image: url(maquinabuena.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+
+}
+
+.b-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.header{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    flex-direction: column;
+}
+.header__descripcion{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
