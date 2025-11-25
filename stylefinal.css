@@ -563,6 +563,78 @@ a {
     background: rgba(221, 14, 52, 0.884);
 }
 
+.botella {
+   min-height: 100vh;
+    padding: 40px 16px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+        url("imaganes/escapada.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
 
 
+.botella-box {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
 
+
+    background-color: rgba(0,0,0,0.4);
+
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.botella-box__titulo {
+    background-color: rgba(0,0,0,0.5);   
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.botella-box__narrativa {
+    background-color: rgba(0,0,0,0.45); 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+.botella-box__accion {
+    background-color: rgba(0,0,0,0.5);  
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.botella-box__advertencia {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+
+.botella-box__boton {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: rgba(50,50,50,0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+
+.botella-box__boton:hover {
+    color: #ffe600; 
+}
