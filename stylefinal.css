@@ -485,8 +485,83 @@ a {
     margin-bottom: 10px;
 }
 
+.muerte {
+    min-height: 100vh;
+    padding: 40px 16px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+        url("imaganes/tumba.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
 
 
+.muerte__contenido {
+    max-width: 750px;
+    background: rgba(74, 74, 74, 0.884);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.muerte__titulo {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.muerte__texto {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.muerte__acciones {
+    max-width: 650px;
+    background: rgba(30,30,30,0.75);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.muerte__pregunta {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+
+.muerte__botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.muerte__boton {
+    padding: 12px 28px;
+    background: rgba(60,60,60,0.8);
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 1.1rem;
+}
+
+.muerte__boton--reintentar {
+    background: rgba(106, 242, 69, 0.884);
+}
+
+.muerte__boton--rendir {
+    background: rgba(221, 14, 52, 0.884);
+}
 
 
 
