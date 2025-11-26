@@ -638,3 +638,65 @@ a {
 .botella-box__boton:hover {
     color: #ffe600; 
 }
+
+
+.empenos {
+    min-height: 100vh;
+    padding: 40px 16px;
+    background-image:
+        url("imaganes/anciano.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+.empenos__box {
+    width: 260px;                            
+    padding: 12px 14px;                        
+    background-color: rgba(0,0,0,0.55);       
+    border-radius: 12px;
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    font-size: 0.9rem;                        
+}
+
+.empenos__titulo {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.empenos__texto {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+
+.empenos__boton-contenedor {
+    position: absolute;
+    bottom: 30px;          
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.empenos__boton {
+    padding: 8px 18px;                           
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;                        
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.empenos__boton:hover {
+    color: #ffe600;    
+}
