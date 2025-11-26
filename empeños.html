@@ -33,4 +33,20 @@
 </section>
 
 </body>
+<footer>
+    <audio id="sonido" src="sonidos/sonido1.mp3" loop></audio>
+     <script>
+
+        document.addEventListener("click", function iniciarAudio() {
+            const audio = document.getElementById("sonida");
+            if (audio) {
+                audio.play().catch(err => {
+                    console.log("No se pudo reproducir el audio:", err);
+                });
+            }
+
+            document.removeEventListener("click", iniciarAudio);
+        });
+    </script>
+</footer>
 </html>

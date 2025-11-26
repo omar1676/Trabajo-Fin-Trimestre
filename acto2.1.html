@@ -43,6 +43,19 @@
 </section>
 
 </body>
-<footer><audio src="sonidos/pueblo.mp3" controls loop></audio>
+<footer><audio id="pueblo" src="sonidos/pueblo.mp3" loop></audio>
+    <script>
+
+        document.addEventListener("click", function iniciarAudio() {
+            const audio = document.getElementById("pueblo");
+            if (audio) {
+                audio.play().catch(err => {
+                    console.log("No se pudo reproducir el audio:", err);
+                });
+            }
+
+            document.removeEventListener("click", iniciarAudio);
+        });
+    </script>
 </html>
 

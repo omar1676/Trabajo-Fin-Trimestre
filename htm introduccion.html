@@ -39,7 +39,24 @@
     </div>
 </section>
 
-</body>
-<footer><audio src="sonidos/relax.mp3" controls loop></audio>
+<footer>
+
+    <audio id="audioRelax" src="sonidos/relax.mp3" loop></audio>
+
+    <script>
+
+        document.addEventListener("click", function iniciarAudio() {
+            const audio = document.getElementById("audioRelax");
+            if (audio) {
+                audio.play().catch(err => {
+                    console.log("No se pudo reproducir el audio:", err);
+                });
+            }
+
+            document.removeEventListener("click", iniciarAudio);
+        });
+    </script>
 </footer>
+
+</body>
 </html>

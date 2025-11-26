@@ -38,7 +38,20 @@
 </section>
 
 <footer>
-    <audio src="sonidos/huida.mp3" controls loop></audio>
+    <audio id="huida" src="sonidos/huida.mp3" loop></audio>
+     <script>
+
+        document.addEventListener("click", function iniciarAudio() {
+            const audio = document.getElementById("huida");
+            if (audio) {
+                audio.play().catch(err => {
+                    console.log("No se pudo reproducir el audio:", err);
+                });
+            }
+
+            document.removeEventListener("click", iniciarAudio);
+        });
+    </script>
 </footer>
 
 </body>

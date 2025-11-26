@@ -39,7 +39,20 @@
 </section>
 
 <footer>
-    <audio src="sonidos/funeral.mp3" controls loop></audio>
+    <audio id="funeral" src="sonidos/funeral.mp3" loop></audio>
+     <script>
+
+        document.addEventListener("click", function iniciarAudio() {
+            const audio = document.getElementById("funeral");
+            if (audio) {
+                audio.play().catch(err => {
+                    console.log("No se pudo reproducir el audio:", err);
+                });
+            }
+
+            document.removeEventListener("click", iniciarAudio);
+        });
+    </script>
 </footer>
 
 </body>

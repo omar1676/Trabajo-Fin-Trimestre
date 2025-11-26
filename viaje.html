@@ -51,5 +51,19 @@
 </section>
 
 </body>
-<footer><audio src="sonidos/accidente.mp3" controls loop></audio>
+<footer>
+    <audio id="accidente" src="sonidos/accidente.mp3" loop></audio>
+    <script>
+
+        document.addEventListener("click", function iniciarAudio() {
+            const audio = document.getElementById("accidente");
+            if (audio) {
+                audio.play().catch(err => {
+                    console.log("No se pudo reproducir el audio:", err);
+                });
+            }
+
+            document.removeEventListener("click", iniciarAudio);
+        });
+    </script>
 </html>
