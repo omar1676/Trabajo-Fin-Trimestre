@@ -1,4 +1,4 @@
-import java.io.IOException;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -26,25 +26,27 @@ public class historia2_0{
         laTienda();
         adivinaNumero();
         ahorcado();
-        elAmigo();
+        pregunta1();
+
+
 
 
 
     }
 
-    private static void esperar(int ms) {
+     static void esperar(int ms) {
         try {
             Thread.sleep(ms);
         } catch (InterruptedException e) {
         }
     }
 
-    private static void escribirLinea(String texto, int pausa) {
+    public static void escribirLinea(String texto, int pausa) {
         System.out.println(texto);
         esperar(pausa);
     }
 
-    private static void escribirLento(String texto, int pausaPorLetra) {
+     public static void escribirLento(String texto, int pausaPorLetra) {
         for (int i = 0; i < texto.length(); i++) {
             System.out.print(texto.charAt(i));
             esperar(pausaPorLetra);
@@ -52,7 +54,7 @@ public class historia2_0{
         System.out.println();
     }
 
-    private static void separador(String titulo) {
+    public static void separador(String titulo) {
         System.out.println();
         System.out.println("══════════════════════════════════════════════════════════════");
         System.out.println("   " + titulo);
@@ -573,8 +575,8 @@ public class historia2_0{
             for (int i = 0; i < progreso.length; i++) {
                 progreso[i] = '_';
             }
-
-            System.out.println("La palabra tiene  letras.");
+            System.out.println("La palabra tiene " + palabra.length() + " letras.\n" +
+                    "Se trata de un objeto que te da suerte");
 
             while (!adivinado && fallos < MAX_FALLOS) {
 
@@ -777,144 +779,310 @@ public class historia2_0{
         }
     }
 
-
-    public static void elAmigo() {
+    public static void pregunta1() {
 
         separador("ACTO VI · EL AMIGO DEL TIEMPO");
 
-        escribirLento("El anciano está orgulloso y apasionado por el viajero.", 100);
-        escribirLento("Hacía mucho que no sentía esas emociones en ese pueblo tan aburrido.", 100);
-        escribirLento("Decide darte las piezas necesarias para reparar la CRONOS-1.", 100);
-        escribirLento("Gracias a lo bien que se lo ha pasado con tus juegos, decide ayudarte aún más.", 100);
-        escribirLento("Te presenta a su amigo astrofísico de la época.", 100);
+        escribirLento("El anciano está orgulloso y apasionado por el viajero.", 35);
+        escribirLento("Hacía mucho que no sentía esas emociones en ese pueblo tan aburrido.", 35);
+        escribirLento("Decide darte las piezas necesarias para reparar la CRONOS-1.", 35);
+        escribirLento("Gracias a lo bien que se lo ha pasado contigo, decide ayudarte aún más.", 35);
+        escribirLento("Te presenta a su amigo astrofísico de la época.", 35);
 
         escribirLinea("-------------------------------------------------------------------------------------------------------------------------------", 400);
 
-        escribirLento(
-                "Tras el primer salto temporal, CRONOS-1 sufre un daño grave en el Núcleo de Estabilidad Temporal.",
-                100);
-        escribirLento(
-                "Es una pieza que mantiene la máquina conectada al presente real.",
-                100);
-        escribirLento(
-                "El científico te explica, serio: La máquina está desestabilizada.",
-                100);
-        escribirLento(
-                "Cada salto temporal que hagas dependerá de que recuerdes y aciertes eventos clave de la historia.",
-                100);
-        escribirLento(
-                "Si fallas... CRONOS-1 no podrá encontrar el camino de vuelta y te quedarás atrapado en la época en la que estés.",
-                100);
+        escribirLento("Tras el primer salto temporal, CRONOS-1 sufre un daño grave en el Núcleo de Estabilidad Temporal.", 30);
+        escribirLento("Es una pieza que mantiene la máquina conectada al presente real.", 30);
+        escribirLento("El científico te explica, serio: \"La máquina está desestabilizada...\"", 30);
+        escribirLento("Cada salto temporal que hagas dependerá de que recuerdes y aciertes eventos clave de la historia.", 30);
+        escribirLento("Si fallas, CRONOS-1 no podrá encontrar el camino de vuelta y te quedarás atrapado en la época en la que estés.", 30);
+
+        escribirLinea("", 400);
+        escribirLento("El anciano y el astrofísico te acompañan hasta una puerta metálica al fondo de la tienda.", 30);
+        escribirLento("Detrás de ella, un resplandor azul ilumina un enorme panel lleno de luces y símbolos extraños.", 30);
+        escribirLento("Es el corazón del sistema de estabilidad temporal.", 30);
+
+        escribirLinea("", 400);
+        escribirLento("Cuando cruzas el umbral, una voz metálica resuena en el laboratorio:", 30);
+        escribirLento(BOLD + "\">> PROTOCOLO DE PRUEBA ACTIVADO. RESPONDE CORRECTAMENTE PARA ASEGURAR EL REGRESO. <<\"" + RESET, 25);
+
 
         laboratorio();
     }
 
+
     public static void laboratorio() {
 
-        boolean reiniciarJuego;
+        separador("ACTO VII · PANEL DE ESTABILIDAD TEMPORAL");
 
-        do {
-            reiniciarJuego = false;
+        escribirLento("Llegáis al laboratorio del astrofísico.", 30);
+        escribirLento("En la entrada aparece un panel con preguntas de cultura general.", 30);
+        escribirLento("Lo que respondas determinará el destino de la CRONOS-1... y el tuyo.", 30);
+        System.out.println();
 
-            separador("ACTO VII · EL LABORATORIO DEL ASTROFÍSICO");
+        int aciertos = 0;
+        String respuesta;
+        boolean valida;
 
-            escribirLento("Llegáis al laboratorio del astrofísico.", 30);
-            escribirLento("En la entrada aparece un panel con preguntas de cultura general.", 30);
-            escribirLento("Esto decidirá si llegarás bien a tu tiempo o quedarás atrapado en el siglo XVIII.", 30);
+
+        escribirLinea("Pregunta 1: ¿Cómo se llamaban los reyes del Antiguo Egipto?", 650);
+        escribirLinea("A) Faraones", 450);
+        escribirLinea("B) Sultanes", 450);
+
+        respuesta = "";
+        valida = false;
+        while (!valida) {
+            System.out.print("Tu respuesta (A/B): ");
+            respuesta = sc.nextLine().trim().toUpperCase();
+
+            if (respuesta.equals("A")) {
+                escribirLinea(GREEN + "Correcto. El panel se ilumina en verde." + RESET, 650);
+                escribirLinea("La CRONOS-1 gana un poco de estabilidad...", 600);
+                aciertos++;
+                valida = true;
+            } else if (respuesta.equals("B")) {
+                escribirLinea(RED + "Incorrecto. El panel se vuelve rojo unos segundos." + RESET, 650);
+                escribirLinea("Una pequeña vibración recorre el suelo del laboratorio.", 600);
+                valida = true;
+            } else {
+                escribirLinea(YELLOW + "Respuesta no válida. Escribe A o B." + RESET, 600);
+            }
+        }
+
+        System.out.println();
+
+
+        escribirLinea(CYAN + "Nivel 1 completado. El Núcleo de Estabilidad recupera un 30% de potencia..." + RESET, 600);
+        escribirLinea(YELLOW + "Pero algo no va bien. Las luces internas de CRONOS-1 parpadean demasiado rápido." + RESET, 650);
+        escribirLinea(RED + "La máquina está reaccionando a los cambios del tiempo." + RESET, 650);
+        System.out.println();
+
+
+        escribirLinea("Pregunta 2 — INESTABILIDAD TEMPORAL", 650);
+        escribirLinea("¿Hace cuántos años se extinguieron los dinosaurios?", 650);
+        escribirLinea("A) Hace 93 millones de años", 450);
+        escribirLinea("B) Hace 66 millones de años", 450);
+        escribirLinea("C) Hace 120 millones de años", 450);
+
+        respuesta = "";
+        valida = false;
+        while (!valida) {
+            System.out.print("Tu respuesta (A/B/C): ");
+            respuesta = sc.nextLine().trim().toUpperCase();
+
+            switch (respuesta) {
+                case "B":
+                    escribirLinea(GREEN + "Correcto. El sistema temporal confirma la referencia histórica." + RESET, 650);
+                    escribirLinea(CYAN + "La estabilidad aumenta… pero CRONOS-1 sigue vibrando peligrosamente." + RESET, 650);
+                    aciertos++;
+                    valida = true;
+                    break;
+
+                case "A":
+                case "C":
+                    escribirLinea(RED + "Incorrecto. El panel se vuelve rojo." + RESET, 650);
+                    escribirLinea(RED + "Has perdido parte de la sincronización con la línea temporal." + RESET, 650);
+                    valida = true;
+                    break;
+
+                default:
+                    escribirLinea(YELLOW + "Respuesta no válida. Escribe A, B o C." + RESET, 600);
+            }
+        }
+
+        System.out.println();
+
+
+        escribirLinea("Nivel 2 superado. El Núcleo de Estabilidad Temporal alcanza un 50% de estabilidad.", 650);
+        escribirLinea("Las luces de CRONOS-1 parpadean con un ritmo extraño.", 650);
+        escribirLinea("Pequeñas chispas salen de los laterales del panel. El sistema está muy exigido.", 650);
+        System.out.println();
+
+        escribirLinea("Pregunta 3 — FRACTURA CONTINENTAL", 650);
+        escribirLinea("¿Quién le dio nombre al continente que conocemos como América?", 650);
+        escribirLinea("A) Einstein", 450);
+        escribirLinea("B) Carlos III", 450);
+        escribirLinea("C) Américo Vespucio", 450);
+        escribirLinea("D) Cristóbal Colón", 450);
+
+        respuesta = "";
+        valida = false;
+        while (!valida) {
+            System.out.print("Tu respuesta (A/B/C/D): ");
+            respuesta = sc.nextLine().trim().toUpperCase();
+
+            switch (respuesta) {
+                case "C":
+                    escribirLinea(GREEN + "Correcto. CRONOS-1 reconoce la referencia histórica." + RESET, 650);
+                    escribirLinea("El panel gana estabilidad y el flujo temporal se vuelve más claro.", 650);
+                    aciertos++;
+                    valida = true;
+                    break;
+
+                case "A":
+                case "B":
+                case "D":
+                    escribirLinea(RED + "Incorrecto. El panel se vuelve rojo." + RESET, 650);
+                    escribirLinea("Has perdido una referencia clave en la cronología.", 650);
+                    valida = true;
+                    break;
+
+                default:
+                    escribirLinea(YELLOW + "Respuesta no válida. Escribe A, B, C o D." + RESET, 600);
+            }
+        }
+
+        System.out.println();
+
+        escribirLinea("Nivel 3 superado. El Núcleo de Estabilidad Temporal alcanza un 75% de estabilidad.", 650);
+        escribirLinea("CRONOS-1 vibra como si fuera a romperse. La inestabilidad avanza rápido.", 650);
+        escribirLinea("Solo queda una pregunta más para decidir tu destino.", 650);
+        System.out.println();
+
+        escribirLinea("Pregunta 4 ", 650);
+        escribirLinea("¿Cuál de estos emperadores fue alumno del filósofo griego Aristóteles?", 650);
+        escribirLinea("A) Trajano", 450);
+        escribirLinea("B) Alejandro Magno", 450);
+        escribirLinea("C) Carlomagno", 450);
+        escribirLinea("D) Augusto", 450);
+
+        respuesta = "";
+        valida = false;
+        while (!valida) {
+            System.out.print("Tu respuesta (A/B/C/D): ");
+            respuesta = sc.nextLine().trim().toUpperCase();
+
+            switch (respuesta) {
+                case "B":
+                    escribirLinea(GREEN + "Correcto. CRONOS-1 confirma su propia identidad." + RESET, 650);
+                    escribirLinea("El panel emite un brillo blanco que inunda todo el laboratorio.", 650);
+                    aciertos++;
+                    valida = true;
+                    break;
+
+                case "A":
+                case "C":
+                case "D":
+                    escribirLinea(RED + "Incorrecto. Parece que has visto demasiadas pelis y series..." + RESET, 650);
+                    escribirLinea("La máquina duda de sí misma por un instante.", 650);
+                    valida = true;
+                    break;
+
+                default:
+                    escribirLinea(YELLOW + "Respuesta no válida. Escribe A, B, C o D." + RESET, 600);
+            }
+        }
+
+        System.out.println();
+        escribirLinea("Has acertado " + aciertos + " de 4 preguntas.", 700);
+        System.out.println();
+
+
+        if (aciertos <= 1) {
+
+            escribirLinea(RED + "Los errores son demasiado graves. El panel entra en modo de emergencia." + RESET, 700);
+            escribirLinea("El núcleo de la CRONOS-1 se sobrecalienta sin control.", 700);
+            escribirLinea("El astrofísico grita algo sobre 'inestabilidad crítica' pero ya es demasiado tarde.", 700);
+
+            System.out.println(
+                    RED +
+                            "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣴⣶⣶⣶⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                            "⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⠿⠿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                            "⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⠋⠀⠀⠀⠀⠙⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                            "⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⠃⠀⠀   BOOOOM   ⠘⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                            "⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                            "⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                            "⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣶⣤⣤⣤⣤⣶⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                            RESET
+            );
+
+            escribirLinea(RED + "La CRONOS-1 explota en un destello de luz. No queda ni rastro de ti en la línea temporal." + RESET, 800);
+            System.out.println(
+                    BROWN +
+                            "⠀⠀⢀⣠⣴⣶⠾⠿⣯⣭⣿⣛⡒⠶⢤⣄⡀⠀⠀⠀\n" +
+                            "⢠⡾⠋⠉⠀⠀⠀⠀⠀⠀⠈⠉⠙⠻⣾⣿⣿⣷⣦⡀\n" +
+                            "⢿⡈⠂⢀⣀⣀⠀⢀⠀⠀⢀⣀⣀⠀⠀⠙⣿⣯⡽⣷\n" +
+                            "⠸⡇⠀⡍⠀⢈⡇⠀⡏⠁⢸⠀⠈⣷⠀⢀⡾⣽⣿⠃\n" +
+                            "⠀⣿⠀⢣⠶⣞⠁⠀⡇⠀⢸⣤⠴⠋⡀⣾⣿⣿⠃⠀\n" +
+                            "⠀⢹⡄⠘⡄⠘⣧⢀⣇⡀⢸⡇⠀⠀⢸⢿⣿⠏⠀⠀\n" +
+                            "⠀⠸⣇⠀⠁⢀⣀⣀⣉⣁⣈⠀⠀⠀⣿⣽⡿⠀⠀⠀\n" +
+                            "⠀⠀⣿⠀⠀⠀⠤⠤⠤⠤⠀⠀⠀⢸⣿⣿⡇⠀⠀⠀\n" +
+                            "⠀⢀⣹⣀⣂⣀⣈⣀⣀⣒⣂⡀⠀⣸⣸⡿⢳⡀⠀⠀\n" +
+                            "⠀⡎⠚⠒⠂⣠⣤⣬⠭⠭⠭⠭⠭⠭⣵⣚⡿⢻⡆⠀\n" +
+                            "⠸⠤⠴⠶⣶⣶⣀⣀⣐⣂⣀⣈⣁⣀⣸⠿⠛⠉⠀⠀\n" +
+                            "REST IN PEACE" + RESET
+            );
+            System.exit(0);
+
+        } else if (aciertos <= 3) {
+
+            escribirLinea(CYAN + "La CRONOS-1 intenta compensar tus errores y abre un portal inestable." + RESET, 700);
+            escribirLinea("El astrofísico duda, pero ya estás dentro de la máquina.", 700);
+            escribirLinea("Un destello te lanza a través del tiempo y el espacio...", 700);
+
+            escribirLento("Despiertas en una playa de arena blanca, con un sol extraño en el cielo.", 35);
+            escribirLento("No hay ciudades, no hay tecnología... solo naturaleza y silencio.", 35);
+            escribirLento("Has quedado atrapado en una isla remota, fuera de cualquier línea temporal conocida.", 35);
             System.out.println();
 
-            String respuesta = "";
-            boolean respuestaValida = false;
+            System.out.println(
+                  "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                          "⠀⠀⠀⠈⠉⠛⢷⣦⡀⠀⣀⣠⣤⠤⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                          "⠀⠀⠀⠀⠀⠀⣀⣻⣿⣿⣿⣋⣀⡀⠀⠀⢀⣠⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                          "⠀⠀⠀⣠⠾⠛⠛⢻⣿⣿⣿⠟⠛⠛⠓⠢⠀⠀⠉⢿⣿⣆⣀⣠⣤⣀⣀⠀⠀⠀\n" +
+                          "⠀⠀⠘⠁⠀⠀⣰⡿⠛⠿⠿⣧⡀⠀⠀⢀⣤⣤⣤⣼⣿⣿⣿⡿⠟⠋⠉⠉⠀⠀\n" +
+                          "⠀⠀⠀⠀⠀⠠⠋⠀⠀⠀⠀⠘⣷⡀⠀⠀⠀⠀⠹⣿⣿⣿⠟⠻⢶⣄⠀⠀⠀⠀\n" +
+                          "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠀⢠⡿⠁⠀⠀⠀⠀⠈⠀⠀⠀⠀\n" +
+                          "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡄⠀⠀⢠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                          "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                          "⠀⣤⣤⣤⣤⣤⣤⡤⠄⠀⠀⣀⡀⢸⡇⢠⣤⣁⣀⠀⠀⠠⢤⣤⣤⣤⣤⣤⣤⠀\n" +
+                          "⠀⠀⠀⠀⠀⠀⣀⣤⣶⣾⣿⣿⣷⣤⣤⣾⣿⣿⣿⣿⣷⣶⣤⣀⠀⠀⠀⠀⠀⠀\n" +
+                          "⠀⠀⠀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⠀⠀⠀\n" +
+                          "⠀⠀⠼⠿⣿⣿⠿⠛⠉⠉⠉⠙⠛⠿⣿⣿⠿⠛⠛⠛⠛⠿⢿⣿⣿⠿⠿⠇⠀⠀\n" +
+                          "⠀⢶⣤⣀⣀⣠⣴⠶⠛⠋⠙⠻⣦⣄⣀⣀⣠⣤⣴⠶⠶⣦⣄⣀⣀⣠⣤⣤⡶⠀\n" +
+                          "⠀⠀⠈⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠀⠀⠀⠀⠀⠉⠉⠉⠉⠀⠀⠀⠀"
+            );
 
-            escribirLinea("Pregunta 1: ¿Cómo se llamaban los reyes del Antiguo Egipto?", 650);
-            escribirLinea("A) Faraones", 450);
-            escribirLinea("B) Sultanes", 450);
+            escribirLento("Con el tiempo, aprendes a sobrevivir allí… pero nadie recordará jamás tu viaje temporal.", 35);
+            System.exit(0);
 
-            while (!respuestaValida) {
-                System.out.print("Tu respuesta (A/B): ");
-                respuesta = sc.nextLine().trim().toUpperCase();
+        } else {
+            System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+                    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣠⣤⣤⡤⠶⠶⠶⠶⠛⠛⠻⣷⠀⠀⠀⠀\n" +
+                    "⠀⢀⣀⣤⣤⣴⠶⠶⠟⠛⠛⠉⣉⣉⣀⣤⣤⣤⣴⣶⣶⣶⣶⣾⡀⢻⡀⠀⠀⠀\n" +
+                    "⠀⠘⣿⠉⣠⣤⣤⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠸⡇⠀⠀⠀\n" +
+                    "⠀⠀⣿⡀⣿⣿⣛⣉⣉⣉⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣷⠀⠀⠀\n" +
+                    "⠀⠀⢸⡇⢻⣿⣿⣿⣿⠿⠿⠟⠛⠛⠋⣉⣉⣿⣿⣿⣿⣿⣿⣿⣿⡆⢹⡀⠀⠀\n" +
+                    "⠀⠀⠸⡇⢸⣿⣧⣤⣤⣴⠶⠶⠾⠛⢻⣿⣿⣿⠟⢉⣁⣤⣄⡉⢻⣇⢸⡇⠀⠀\n" +
+                    "⠀⠀⠀⣧⠈⣿⣿⣁⣤⣤⣤⣶⣶⣾⣿⣿⣿⡏⠰⣿⣿⣿⣿⡗⠀⣿⠈⣿⠀⠀\n" +
+                    "⠀⠀⠀⢹⠀⢿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠟⠛⠀⠙⠛⠛⠛⠁⠀⣥⣤⣿⡄⠀\n" +
+                    "⠀⠀⠀⢸⡆⠸⠛⠛⠋⣉⣉⣠⣤⣤⣴⡶⠶⠿⠟⠀⢸⣷⣿⣿⡀⠉⠀⠀⠀⠀\n" +
+                    "⠀⠀⠀⠈⡷⠶⠶⠛⠛⠋⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣧⠀⠀⠀⠀⠀\n" +
+                    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⡆⠀⠀⠀⠀\n" +
+                    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡿⠉⠛⠿⠀⠀⠀⠀\n" +
+                    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀");
+            escribirLinea(GREEN + "El panel marca una estabilidad temporal del 100%." + RESET, 700);
+            escribirLinea("El astrofísico te mira impresionado: \"No muchos viajeros llegan tan lejos...\"", 750);
+            escribirLinea("Ajusta los controles de la CRONOS-1 y te marca un destino especial en la consola.", 750);
 
-                switch (respuesta) {
-                    case "A":
-                        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣴⣶⣷⣶⣿⣶⣶⣶⣦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⡾⣿⣿⡝⣿⣿⡆⢿⣿⣦⢿⣿⣌⣿⣿⠛⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣶⣯⣿⣿⣝⣿⣿⡘⣿⣿⣿⣿⣯⣾⣿⢿⣸⡿⢰⣿⠏⣽⣿⣦⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⠀⠀⠀⠀⣔⣋⣩⣉⣟⣿⣿⣿⣿⡞⣿⣧⢸⣿⣿⣿⣹⣿⣿⢸⣿⡇⣾⡟⣼⡿⣽⣾⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⠀⠀⠀⡼⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⢹⣿⡈⣿⣷⣿⣇⣿⣿⣿⣿⣇⣿⢱⡿⣾⣿⣾⣷⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⠀⠀⣼⣶⣶⣶⣶⣾⣼⣿⣧⣿⡿⠟⠃⠉⠁⠉⠛⠛⠛⠛⠛⠛⡏⠘⠛⢾⣿⣯⣏⣿⣯⣍⣛⡄⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⠀⡼⠉⠉⠉⠉⠉⢹⢿⣿⣿⣿⣃⡤⠶⠒⠒⠂⠀⠀⠀⠀⠒⠒⠓⠲⠶⣤⡘⣿⣿⣿⠟⠛⠛⢳⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⢠⣧⣄⣠⣤⣤⣤⣤⣼⣿⣿⣿⣿⣿⣿⡿⣷⣶⣶⣤⣄⣀⠀⠀⣀⣤⣤⣤⣤⣀⢿⣻⣿⣏⣀⣀⣈⣻⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠀⣾⠿⠿⠿⠿⠿⠿⢿⢹⣯⣿⣿⣿⢟⣡⡶⣾⣿⣿⣿⣿⡏⠀⠘⣻⣿⣯⣭⣟⢻⢿⡿⣻⡿⠿⠿⠿⢿⠇⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⢰⣥⣤⣤⣤⣤⣤⣤⣼⣿⣬⣿⣿⠯⠀⠀⠈⠒⠒⠒⠉⠾⠷⠀⠀⠘⠫⠽⠯⠋⠉⢹⡿⣿⣧⣤⣤⣤⣴⣼⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠛⠛⠛⠛⠛⠛⠛⠛⢿⢿⠛⢾⠈⢃⠀⠀⠀⠀⠀⠀⢀⣶⣿⠄⠀⠀⠀⠀⠀⠀⠀⣿⢇⣿⠛⠉⠈⠉⠛⢻⡆⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⣶⣶⣶⣶⣶⣶⣶⣶⣶⣿⣶⣴⡇⢸⣷⡀⠀⠀⠀⠀⢸⣛⡋⠀⢀⠀⢢⠀⠀⠀⠠⡗⢩⣿⣿⣖⠁⢲⣶⣾⢣⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠛⠛⠛⠛⠛⠉⠉⠉⠉⠉⠉⠙⣅⢸⣿⣇⠀⢠⣅⠀⠀⠉⠉⠋⠉⠁⠀⠑⡀⠀⢰⣿⠉⠉⠉⠉⠉⠉⠉⠙⡿⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢘⣿⣿⡄⠀⠈⠙⠻⡛⠿⠶⠒⠒⠒⠃⠀⠀⣾⣿⣿⣿⣿⣿⣀⣸⣿⣿⣯⡇⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⣁⣉⡇⠸⣿⣿⣿⣤⠀⠀⠀⠙⠛⠛⠁⠀⠀⠀⢀⣠⣇⣀⣀⣀⣀⣀⣀⣀⣀⣀⣹⡇⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⡇⠀⢻⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⣰⠟⢹⡿⠿⠿⠿⠿⠿⠿⠿⠿⠿⢿⣵⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠉⠉⠉⢁⣀⣀⣀⣀⣀⣀⣀⣤⣧⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣷⠶⠋⠁⠀⣼⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣿⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⣿⣿⣿⡿⠿⠿⠿⠿⠿⠻⢿⢿⣿⢆⠀⠀⠹⣿⣿⣿⣿⣿⠋⠉⠀⠀⠀⠀⠀⡿⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⢻⢿⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⣤⣤⣤⣤⣤⣶⣶⣶⣶⣶⣿⣿⣿⣏⢆⠀⠀⠙⢿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣉⣛⣿⣿⣿⣿⣿⣶⡁⠀⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⣿⣿⣟⣏⣉⣉⣉⣁⡀⠤⣤⣤⣤⣾⣮⢣⠀⠀⠀⠻⣿⠛⠀⠀⠀⠀⠀⠀⢸⣇⢦⣤⣤⣤⠤⠤⣤⣤⣤⣷⢿⠿⡄⠀⠀⣿⣿⣿⣿⣿\n" +
-                                "⣻⣿⣿⣿⡿⡿⠿⠿⠧⠤⠚⠛⠛⠛⠛⢇⢣⣀⠀⠀⠉⠇⠀⠀⠀⠀⢀⣴⣿⣿⡜⡏⠉⠉⣁⣉⣉⣉⣉⣻⠎⠐⢹⡀⠀⣿⣿⣿⣿⣿\n" +
-                                "⠈⠙⣿⠿⣿⣵⣶⣶⣶⣶⠉⢹⣿⣿⣿⣿⣧⢻⣿⣷⣶⣤⣤⣤⣴⣾⣿⣿⣿⣿⣷⠹⡿⠿⠿⠤⠼⠿⠿⠿⣀⣉⣻⣧⠀⣿⣿⣿⣿⣿\n" +
-                                "⣶⣾⣷⣶⣾⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣿⣶⣿⣿⣶⣿⣿⣿⣿⣿\n" +
-                                "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n" +
-                                "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
-                        escribirLinea(GREEN + "Correcto. El panel se ilumina en verde." + RESET, 650);
-                        escribirLinea("La puerta del laboratorio se abre lentamente...", 700);
-                        respuestaValida = true;
-                        break;
+            separador("EPÍLOGO · DOS AÑOS DESPUÉS");
 
-                    case "B":
-                        escribirLinea(RED + "Incorrecto. El panel se vuelve rojo." + RESET, 650);
-                        escribirLinea("Las luces parpadean y la CRONOS-1 vibra peligrosamente.", 700);
-                        respuestaValida = true;
-                        break;
+            escribirLento("Apareces de golpe en la puerta del XTART.", 35);
+            escribirLento("Miras el móvil: han pasado dos años exactos.", 35);
+            escribirLento("Llevas en la mano tu título, proyecto final presentado y aprobado.", 35);
+            escribirLento("Dani y Nuria hablan en la sala de profesores sobre 'aquel alumno que siempre iba un poco adelantado al tiempo'.", 35);
 
-                    default:
-                        escribirLinea(YELLOW + "Respuesta no válida. Escribe A o B." + RESET, 600);
-                }
-            }
-            
+            System.out.println();
+            escribirLinea(CYAN + "CRONOS-1 ha cumplido su cometido... por ahora." + RESET, 700);
+            escribirLinea(BOLD + "FIN DEL VIAJE (O EL PRINCIPIO DE OTRO)." + RESET, 800);
 
-            String repetir;
-            do {
-                escribirLinea("El anciano te mira con decepción y te indica la salida del laboratorio.", 650);
-                escribirLinea("¿Quieres reiniciar el panel? (1 = Sí, 2 = No)", 650);
-                repetir = sc.nextLine().trim();
-
-                if (repetir.equals("1")) {
-                    escribirLinea(YELLOW + "REINICIAMOS EL PANEL..." + RESET, 650);
-                    reiniciarJuego = true;
-                } else if (repetir.equals("2")) {
-                    System.out.println(
-                            RED + "Te acostumbras a esa vida y mueres 10 años después por una viruela común.\n" + RESET +
-                                    BROWN +
-                                    "⠀⠀⢀⣠⣴⣶⠾⠿⣯⣭⣿⣛⡒⠶⢤⣄⡀⠀⠀⠀\n" +
-                                    "⢠⡾⠋⠉⠀⠀⠀⠀⠀⠀⠈⠉⠙⠻⣾⣿⣿⣷⣦⡀\n" +
-                                    "⢿⡈⠂⢀⣀⣀⠀⢀⠀⠀⢀⣀⣀⠀⠀⠙⣿⣯⡽⣷\n" +
-                                    "⠸⡇⠀⡍⠀⢈⡇⠀⡏⠁⢸⠀⠈⣷⠀⢀⡾⣽⣿⠃\n" +
-                                    "⠀⣿⠀⢣⠶⣞⠁⠀⡇⠀⢸⣤⠴⠋⡀⣾⣿⣿⠃⠀\n" +
-                                    "⠀⢹⡄⠘⡄⠘⣧⢀⣇⡀⢸⡇⠀⠀⢸⢿⣿⠏⠀⠀\n" +
-                                    "⠀⠸⣇⠀⠁⢀⣀⣀⣉⣁⣈⠀⠀⠀⣿⣽⡿⠀⠀⠀\n" +
-                                    "⠀⠀⣿⠀⠀⠀⠤⠤⠤⠤⠀⠀⠀⢸⣿⣿⡇⠀⠀⠀\n" +
-                                    "⠀⢀⣹⣀⣂⣀⣈⣀⣀⣒⣂⡀⠀⣸⣸⡿⢳⡀⠀⠀\n" +
-                                    "⠀⡎⠚⠒⠂⣠⣤⣬⠭⠭⠭⠭⠭⠭⣵⣚⡿⢻⡆⠀\n" +
-                                    "⠸⠤⠴⠶⣶⣶⣀⣀⣐⣂⣀⣈⣁⣀⣸⠿⠛⠉⠀⠀\n" +
-                                    "REST IN PEACE" + RESET
-                    );
-                    System.exit(0);
-                } else {
-                    escribirLinea(YELLOW + "Valor no válido. Escribe 1 o 2." + RESET, 600);
-                }
-
-            } while (!repetir.equals("1") && !repetir.equals("2"));
-
-        } while (reiniciarJuego);
+            System.exit(0);
+        }
     }
+
 }
+
+
+
 
