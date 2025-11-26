@@ -27,12 +27,8 @@ public class historia2_0{
         adivinaNumero();
         ahorcado();
         elAmigo();
-        primeraPregunta();
-        segundaPregunta();
-        cuartaPregunta();
-        quintaPregunta();
-        sextaPregunta();
-        septimaPregunta();
+
+
 
     }
 
@@ -156,8 +152,8 @@ public class historia2_0{
 
 
             String[][] alumnosXTART = {
-                    {"omar", "aitor", "dani", "laura", "ivan", "javier", "sergio", "diego", "juan", "alvaro"}, // DAM
-                    {"nuria", "helen", "carlos", "alejandro", "gonzalo", "noemi", "renzo", "clemente", "berta"} // ASIR
+                    {"omar", "aitor", "dani", "laura", "ivan", "javier", "sergio", "diego", "juan", "alvaro"},
+                    {"nuria", "helen", "carlos", "alejandro", "gonzalo", "noemi", "renzo", "clemente", "berta"}
             };
 
             String clase_xtart;
@@ -196,7 +192,6 @@ public class historia2_0{
 
             } while (!nombreCorrecto);
 
-            // Aquí seguiría tu código del año de nacimiento ↓↓
 
 
 
@@ -781,85 +776,145 @@ public class historia2_0{
             System.out.println("       ____________|_____");
         }
     }
-     public static void elAmigo() {
-         System.out.println("El anciano estaba orgulloso y apasionado por el viajero, debido  que hacía mucho que no sentía \n" +
-                 "emociones en ese pueblo aburrido. Gracias a que el anciano se lo pasó tan bien decidió ayudar al joven. \n" +
-                 "Le presentó a su amigo astrofísico de la época. Pero para acceder a su laboratorio, tenían que pasar una serie de \n" +
-                 "preguntas para que ningún inculto se acerque a la base del laboratorio,\n" +
-                 "");
 
-         System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
-     }
 
-    public static void primeraPregunta() {
+    public static void elAmigo() {
 
-        Scanner sc = new Scanner(System.in);
+        separador("ACTO VI · EL AMIGO DEL TIEMPO");
 
-        System.out.println("Llegáis al laboratorio. \n" +
-        "En la entrada aparece un panel con preguntas de cultura general.\n" +
-        "Esto decidirá si llegarás bien a tu tiempo o quedarás atrapado en el siglo XVIII.");
+        escribirLento("El anciano está orgulloso y apasionado por el viajero.", 100);
+        escribirLento("Hacía mucho que no sentía esas emociones en ese pueblo tan aburrido.", 100);
+        escribirLento("Decide darte las piezas necesarias para reparar la CRONOS-1.", 100);
+        escribirLento("Gracias a lo bien que se lo ha pasado con tus juegos, decide ayudarte aún más.", 100);
+        escribirLento("Te presenta a su amigo astrofísico de la época.", 100);
 
-        System.out.println("Pregunta 1: ¿Cuál es el planeta más cercano al Sol?");
-        System.out.println("A) Venus");
-        System.out.println("B) Mercurio");
-        System.out.println("C) Marte");
+        escribirLinea("-------------------------------------------------------------------------------------------------------------------------------", 400);
 
-        System.out.print("Tu respuesta: ");
-        String respuesta = sc.nextLine().trim().toUpperCase();
+        escribirLento(
+                "Tras el primer salto temporal, CRONOS-1 sufre un daño grave en el Núcleo de Estabilidad Temporal.",
+                100);
+        escribirLento(
+                "Es una pieza que mantiene la máquina conectada al presente real.",
+                100);
+        escribirLento(
+                "El científico te explica, serio: La máquina está desestabilizada.",
+                100);
+        escribirLento(
+                "Cada salto temporal que hagas dependerá de que recuerdes y aciertes eventos clave de la historia.",
+                100);
+        escribirLento(
+                "Si fallas... CRONOS-1 no podrá encontrar el camino de vuelta y te quedarás atrapado en la época en la que estés.",
+                100);
 
-        switch (respuesta) {
-            case "B":
-                System.out.println("\n✔ Correcto. El panel se ilumina en verde.");
-                System.out.println("UN");
-
-                break;
-
-            case "A":
-            case "C":
-                System.out.println("\n Incorrecto. El panel se vuelve rojo.");
-                System.out.println("Te has quedado atrapado en el siglo XVIII.\n");
-
-                break;
-
-            default:
-                System.out.println("Respuesta no válida. Inténtalo de nuevo.\n");
-                primeraPregunta();
-        }
+        laboratorio();
     }
-    public static void segundaPregunta() {
 
-        Scanner sc = new Scanner(System.in);
+    public static void laboratorio() {
 
-        System.out.println("Llegáis al laboratorio. \n" +
-                "En la entrada aparece un panel con preguntas de cultura general.\n" +
-                "Esto decidirá si llegarás bien a tu tiempo o quedarás atrapado en el siglo XVIII.");
+        boolean reiniciarJuego;
 
-        System.out.println("Pregunta 1: ¿Cuál es el planeta más cercano al Sol?");
-        System.out.println("A) Venus");
-        System.out.println("B) Mercurio");
-        System.out.println("C) Marte");
+        do {
+            reiniciarJuego = false;
 
-        System.out.print("Tu respuesta: ");
-        String respuesta = sc.nextLine().trim().toUpperCase();
+            separador("ACTO VII · EL LABORATORIO DEL ASTROFÍSICO");
 
-        switch (respuesta) {
-            case "B":
-                System.out.println(" Correcto. El panel se ilumina en verde.");
-                System.out.println("La puerta del laboratorio se abre...");
+            escribirLento("Llegáis al laboratorio del astrofísico.", 30);
+            escribirLento("En la entrada aparece un panel con preguntas de cultura general.", 30);
+            escribirLento("Esto decidirá si llegarás bien a tu tiempo o quedarás atrapado en el siglo XVIII.", 30);
+            System.out.println();
 
-                break;
+            String respuesta = "";
+            boolean respuestaValida = false;
 
-            case "A":
-            case "C":
-                System.out.println("Incorrecto. El panel se vuelve rojo.\n" +
-                        RED +"Te has quedado atrapado en el siglo XVIII." + RESET);
+            escribirLinea("Pregunta 1: ¿Cómo se llamaban los reyes del Antiguo Egipto?", 650);
+            escribirLinea("A) Faraones", 450);
+            escribirLinea("B) Sultanes", 450);
 
-                break;
+            while (!respuestaValida) {
+                System.out.print("Tu respuesta (A/B): ");
+                respuesta = sc.nextLine().trim().toUpperCase();
 
-            default:
-                System.out.println(YELLOW +"Respuesta no válida. Inténtalo de nuevo." + RESET);
-               segundaPregunta();
-        }
+                switch (respuesta) {
+                    case "A":
+                        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣴⣶⣷⣶⣿⣶⣶⣶⣦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⡾⣿⣿⡝⣿⣿⡆⢿⣿⣦⢿⣿⣌⣿⣿⠛⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣶⣯⣿⣿⣝⣿⣿⡘⣿⣿⣿⣿⣯⣾⣿⢿⣸⡿⢰⣿⠏⣽⣿⣦⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⠀⠀⠀⠀⣔⣋⣩⣉⣟⣿⣿⣿⣿⡞⣿⣧⢸⣿⣿⣿⣹⣿⣿⢸⣿⡇⣾⡟⣼⡿⣽⣾⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⠀⠀⠀⡼⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⢹⣿⡈⣿⣷⣿⣇⣿⣿⣿⣿⣇⣿⢱⡿⣾⣿⣾⣷⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⠀⠀⣼⣶⣶⣶⣶⣾⣼⣿⣧⣿⡿⠟⠃⠉⠁⠉⠛⠛⠛⠛⠛⠛⡏⠘⠛⢾⣿⣯⣏⣿⣯⣍⣛⡄⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⠀⡼⠉⠉⠉⠉⠉⢹⢿⣿⣿⣿⣃⡤⠶⠒⠒⠂⠀⠀⠀⠀⠒⠒⠓⠲⠶⣤⡘⣿⣿⣿⠟⠛⠛⢳⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⢠⣧⣄⣠⣤⣤⣤⣤⣼⣿⣿⣿⣿⣿⣿⡿⣷⣶⣶⣤⣄⣀⠀⠀⣀⣤⣤⣤⣤⣀⢿⣻⣿⣏⣀⣀⣈⣻⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠀⣾⠿⠿⠿⠿⠿⠿⢿⢹⣯⣿⣿⣿⢟⣡⡶⣾⣿⣿⣿⣿⡏⠀⠘⣻⣿⣯⣭⣟⢻⢿⡿⣻⡿⠿⠿⠿⢿⠇⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⢰⣥⣤⣤⣤⣤⣤⣤⣼⣿⣬⣿⣿⠯⠀⠀⠈⠒⠒⠒⠉⠾⠷⠀⠀⠘⠫⠽⠯⠋⠉⢹⡿⣿⣧⣤⣤⣤⣴⣼⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠛⠛⠛⠛⠛⠛⠛⠛⢿⢿⠛⢾⠈⢃⠀⠀⠀⠀⠀⠀⢀⣶⣿⠄⠀⠀⠀⠀⠀⠀⠀⣿⢇⣿⠛⠉⠈⠉⠛⢻⡆⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⣶⣶⣶⣶⣶⣶⣶⣶⣶⣿⣶⣴⡇⢸⣷⡀⠀⠀⠀⠀⢸⣛⡋⠀⢀⠀⢢⠀⠀⠀⠠⡗⢩⣿⣿⣖⠁⢲⣶⣾⢣⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠛⠛⠛⠛⠛⠉⠉⠉⠉⠉⠉⠙⣅⢸⣿⣇⠀⢠⣅⠀⠀⠉⠉⠋⠉⠁⠀⠑⡀⠀⢰⣿⠉⠉⠉⠉⠉⠉⠉⠙⡿⠀⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢘⣿⣿⡄⠀⠈⠙⠻⡛⠿⠶⠒⠒⠒⠃⠀⠀⣾⣿⣿⣿⣿⣿⣀⣸⣿⣿⣯⡇⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⣁⣉⡇⠸⣿⣿⣿⣤⠀⠀⠀⠙⠛⠛⠁⠀⠀⠀⢀⣠⣇⣀⣀⣀⣀⣀⣀⣀⣀⣀⣹⡇⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⡇⠀⢻⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⣰⠟⢹⡿⠿⠿⠿⠿⠿⠿⠿⠿⠿⢿⣵⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠉⠉⠉⢁⣀⣀⣀⣀⣀⣀⣀⣤⣧⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣷⠶⠋⠁⠀⣼⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣿⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⣿⣿⣿⡿⠿⠿⠿⠿⠿⠻⢿⢿⣿⢆⠀⠀⠹⣿⣿⣿⣿⣿⠋⠉⠀⠀⠀⠀⠀⡿⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⢻⢿⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⣤⣤⣤⣤⣤⣶⣶⣶⣶⣶⣿⣿⣿⣏⢆⠀⠀⠙⢿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣉⣛⣿⣿⣿⣿⣿⣶⡁⠀⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⣿⣿⣟⣏⣉⣉⣉⣁⡀⠤⣤⣤⣤⣾⣮⢣⠀⠀⠀⠻⣿⠛⠀⠀⠀⠀⠀⠀⢸⣇⢦⣤⣤⣤⠤⠤⣤⣤⣤⣷⢿⠿⡄⠀⠀⣿⣿⣿⣿⣿\n" +
+                                "⣻⣿⣿⣿⡿⡿⠿⠿⠧⠤⠚⠛⠛⠛⠛⢇⢣⣀⠀⠀⠉⠇⠀⠀⠀⠀⢀⣴⣿⣿⡜⡏⠉⠉⣁⣉⣉⣉⣉⣻⠎⠐⢹⡀⠀⣿⣿⣿⣿⣿\n" +
+                                "⠈⠙⣿⠿⣿⣵⣶⣶⣶⣶⠉⢹⣿⣿⣿⣿⣧⢻⣿⣷⣶⣤⣤⣤⣴⣾⣿⣿⣿⣿⣷⠹⡿⠿⠿⠤⠼⠿⠿⠿⣀⣉⣻⣧⠀⣿⣿⣿⣿⣿\n" +
+                                "⣶⣾⣷⣶⣾⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣿⣶⣿⣿⣶⣿⣿⣿⣿⣿\n" +
+                                "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n" +
+                                "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
+                        escribirLinea(GREEN + "Correcto. El panel se ilumina en verde." + RESET, 650);
+                        escribirLinea("La puerta del laboratorio se abre lentamente...", 700);
+                        respuestaValida = true;
+                        break;
+
+                    case "B":
+                        escribirLinea(RED + "Incorrecto. El panel se vuelve rojo." + RESET, 650);
+                        escribirLinea("Las luces parpadean y la CRONOS-1 vibra peligrosamente.", 700);
+                        respuestaValida = true;
+                        break;
+
+                    default:
+                        escribirLinea(YELLOW + "Respuesta no válida. Escribe A o B." + RESET, 600);
+                }
+            }
+            
+
+            String repetir;
+            do {
+                escribirLinea("El anciano te mira con decepción y te indica la salida del laboratorio.", 650);
+                escribirLinea("¿Quieres reiniciar el panel? (1 = Sí, 2 = No)", 650);
+                repetir = sc.nextLine().trim();
+
+                if (repetir.equals("1")) {
+                    escribirLinea(YELLOW + "REINICIAMOS EL PANEL..." + RESET, 650);
+                    reiniciarJuego = true;
+                } else if (repetir.equals("2")) {
+                    System.out.println(
+                            RED + "Te acostumbras a esa vida y mueres 10 años después por una viruela común.\n" + RESET +
+                                    BROWN +
+                                    "⠀⠀⢀⣠⣴⣶⠾⠿⣯⣭⣿⣛⡒⠶⢤⣄⡀⠀⠀⠀\n" +
+                                    "⢠⡾⠋⠉⠀⠀⠀⠀⠀⠀⠈⠉⠙⠻⣾⣿⣿⣷⣦⡀\n" +
+                                    "⢿⡈⠂⢀⣀⣀⠀⢀⠀⠀⢀⣀⣀⠀⠀⠙⣿⣯⡽⣷\n" +
+                                    "⠸⡇⠀⡍⠀⢈⡇⠀⡏⠁⢸⠀⠈⣷⠀⢀⡾⣽⣿⠃\n" +
+                                    "⠀⣿⠀⢣⠶⣞⠁⠀⡇⠀⢸⣤⠴⠋⡀⣾⣿⣿⠃⠀\n" +
+                                    "⠀⢹⡄⠘⡄⠘⣧⢀⣇⡀⢸⡇⠀⠀⢸⢿⣿⠏⠀⠀\n" +
+                                    "⠀⠸⣇⠀⠁⢀⣀⣀⣉⣁⣈⠀⠀⠀⣿⣽⡿⠀⠀⠀\n" +
+                                    "⠀⠀⣿⠀⠀⠀⠤⠤⠤⠤⠀⠀⠀⢸⣿⣿⡇⠀⠀⠀\n" +
+                                    "⠀⢀⣹⣀⣂⣀⣈⣀⣀⣒⣂⡀⠀⣸⣸⡿⢳⡀⠀⠀\n" +
+                                    "⠀⡎⠚⠒⠂⣠⣤⣬⠭⠭⠭⠭⠭⠭⣵⣚⡿⢻⡆⠀\n" +
+                                    "⠸⠤⠴⠶⣶⣶⣀⣀⣐⣂⣀⣈⣁⣀⣸⠿⠛⠉⠀⠀\n" +
+                                    "REST IN PEACE" + RESET
+                    );
+                    System.exit(0);
+                } else {
+                    escribirLinea(YELLOW + "Valor no válido. Escribe 1 o 2." + RESET, 600);
+                }
+
+            } while (!repetir.equals("1") && !repetir.equals("2"));
+
+        } while (reiniciarJuego);
     }
 }
 
