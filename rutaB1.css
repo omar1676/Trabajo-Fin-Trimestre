@@ -1,0 +1,46 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#body__B1 {
+    height: 98%;
+    background: linear-gradient(180deg, rgb(79, 91, 199) 20%, rgb(61, 39, 6) 60%);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    overflow-y: hidden;
+}
+
+#navbar-text--style {
+    margin-left: 25%;
+    text-align: center;
+    color: rgb(255, 255, 255)
+}
+
+.carouselSlide__B1 {
+    height: 100%;
+    background-image: url(image/ruta_B1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 28.7%;
+    display: grid;
+}
+
+#carouselExampleCaptions {
+    width: 30%;
+    margin: 5% 10%;
+}
+
+#carousel-item--color{
+    color: rgb(0, 4, 255);
+    text-shadow: 1px 1px 15px rgb(255, 255, 255);
+    font-size: 125%;
+    text-decoration: none;
+}
+
+.carousel-caption__option {
+    text-decoration: none;
+}
