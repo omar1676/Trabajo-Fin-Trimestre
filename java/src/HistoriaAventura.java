@@ -4,15 +4,44 @@ import java.util.Scanner;
 
 public class HistoriaAventura {
 
-    private static final Scanner sc = new Scanner(System.in);
+    static String[] inventario = new String[10];
+    static int numObjetos = 0;
 
-    private static final String RESET = "\u001B[0m";
-    private static final String CYAN  = "\u001B[36m";
-    private static final String GREEN = "\u001B[32m";
-    private static final String YELLOW= "\u001B[33m";
-    private static final String BOLD  = "\u001B[1m";
-    public static final String RED = "\u001B[31m";
-    public static final String BROWN = "\u001B[38;5;94m";
+    static final Scanner sc = new Scanner(System.in);
+
+
+     static final String RESET = "\u001B[0m";
+     static final String CYAN  = "\u001B[36m";
+     static final String GREEN = "\u001B[32m";
+     static final String YELLOW= "\u001B[33m";
+     static final String BOLD  = "\u001B[1m";
+     static final String RED = "\u001B[31m";
+     static final String BROWN = "\u001B[38;5;94m";
+
+    static void añadirAlInventario(String objeto) {
+        if (numObjetos < inventario.length) {
+            inventario[numObjetos] = objeto;
+            numObjetos++;
+            escribirLinea(GREEN + ">> Has obtenido: " + objeto + RESET, 500);
+        } else {
+            escribirLinea(RED + ">> Inventario lleno, no puedes llevar más objetos." + RESET, 500);
+        }
+    }
+
+    static void mostrarInventario() {
+        escribirLinea(CYAN + "=== INVENTARIO ACTUAL ===" + RESET, 500);
+
+        if (numObjetos == 0) {
+            escribirLinea(YELLOW + "No llevas nada encima todavía." + RESET, 500);
+        } else {
+            for (int i = 0; i < numObjetos; i++) {
+                System.out.println(" - " + inventario[i]);
+            }
+            esperar(500);
+        }
+
+        System.out.println();
+    }
 
     public static void main(String[] args) {
         banner();
@@ -474,6 +503,8 @@ public class HistoriaAventura {
                             GREEN + "ACERTASTEEEEE. Con " + contador + " intentos." + RESET, 650);
                     escribirLinea(
                             "Te falta la última parte para conseguir tu objetivo sin que me pagues, ¿serías capaz?", 700);
+
+                    añadirAlInventario("Llave oxidada del anciano");
                     acertado = true;
                     break;
                 } else if (n1 > secreto) {
@@ -600,6 +631,10 @@ public class HistoriaAventura {
             if (adivinado) {
                 System.out.println(GREEN + "¡Felicidades! Adivinaste la palabra: " + palabra + RESET);
                 System.out.println("El anciano te entrega la pieza para la CRONOS-1.");
+
+
+                añadirAlInventario("Talismán de la suerte");
+
                 reiniciar = false;
 
             } else {
@@ -733,6 +768,8 @@ public class HistoriaAventura {
         escribirLento("Cuando cruzas el umbral, una voz metálica resuena en el laboratorio:", 30);
         escribirLento(BOLD + "\">> PROTOCOLO DE PRUEBA ACTIVADO. RESPONDE CORRECTAMENTE PARA ASEGURAR EL REGRESO. <<\"" + RESET, 25);
 
+        escribirLinea(CYAN + "Antes de continuar, revisas lo que llevas en la mochila..." + RESET, 500);
+        mostrarInventario();
         laboratorio();
     }
 
@@ -1012,6 +1049,9 @@ public class HistoriaAventura {
             System.out.println();
             escribirLinea(CYAN + "CRONOS-1 ha cumplido su cometido... por ahora." + RESET, 700);
             escribirLinea(BOLD + "FIN DEL VIAJE (O EL PRINCIPIO DE OTRO)." + RESET, 800);
+
+            escribirLinea(CYAN + "Inventario final del viajero:" + RESET, 600);
+            mostrarInventario();
 
             System.exit(0);
         }
