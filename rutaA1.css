@@ -3,7 +3,7 @@ html {
     height: 100%;
 }
 
-#body__A1 {
+body {
     height: 98%;
     background: linear-gradient(180deg, rgb(79, 91, 199) 20%, rgb(61, 39, 6) 60%);
     background-repeat: no-repeat;
@@ -85,11 +85,11 @@ a:hover {
     font-size: 150%;
 }
 
-#mainBoxA1__option {
+.mainBoxA1__option--borderHover {
     border-radius: 5%;
 }
 
-#mainBoxA1__option:hover {
+.mainBoxA1__option--borderHover:hover {
     transition: 2s;
     background-color: rgb(125, 125, 125, 0.5);
 }
