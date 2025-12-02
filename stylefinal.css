@@ -1,13 +1,12 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: #f9fafb;
-    min-height: 100vh;
+   
 }
 
 a {
@@ -123,7 +122,7 @@ a {
     margin-bottom: 10px;
 }
 
-.acto1__texto--resaltado {
+.acto1__textoResaltado {
     margin-top: 8px;
     font-weight: 600;
 }
@@ -176,9 +175,6 @@ a {
 .viaje {
     min-height: 100vh;
     padding: 100px 100px;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
-        url("imaganes/viaje.png");  
     background-size: cover;
     background-position: center;
     color: #f9fafb;
@@ -213,18 +209,19 @@ a {
     padding: 22px;
     border-radius: 14px;
     background: rgba(15, 23, 42, 0.85);
-    border: 1px solid rgba(148, 163, 184, 0.6);
+    border: 2px solid rgba(148, 163, 184, 0.6);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 
-.viaje__panel--normal {
+.viaje__panelNormal {
     border-color: rgba(56, 189, 248, 0.8);
 }
 
-.viaje__panel--alarma {
-    background: rgba(127, 29, 29, 0.9);
+.viaje__panelAlarma {
+    background: rgba(224, 100, 100, 0.9);
     border-color: rgba(248, 113, 113, 0.9);
+    opacity: 70%;
 }
 
 
@@ -234,11 +231,12 @@ a {
     width: 35%;               
     padding: 22px;
     border-radius: 14px;
-    background: rgba(63, 57, 51, 0.85);
+    background: rgba(148, 144, 142, 0.85);
     border: 1px solid rgba(148, 163, 184, 0.6);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
+    opacity: 80%;
 }
 
 .viaje__footer:hover {
@@ -248,17 +246,14 @@ a {
 
 .revision {
     min-height: 100vh;
-    padding: 40px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-        url("imaganes/maquinajodida.png"); 
+    padding: 170px 100px;
+    
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .revision__contenido {
@@ -278,13 +273,14 @@ a {
 }
 
 .revision__texto {
+    margin-top: 22px;
     font-size: 0.98rem;
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
 .revision__opciones {
-    margin-top: 22px;
+    margin-top: 52px;
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
@@ -311,6 +307,7 @@ a {
 }
 
 .revision__subtitulo {
+    text-align: center;
     font-size: 1.1rem;
     margin-bottom: 4px;
 }
@@ -320,28 +317,9 @@ a {
     line-height: 1.5;
 }
 
-
-.pagina-acto3 {
-    min-height: 100vh;
-    padding: 40px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
-        url("imaganes/maquinajodida.png");
-    background-size: cover;
-    background-position:center;
-    background-repeat: no-repeat;
-}
-
-
 .carruseles {
     min-height: 100vh;
-    padding: 40px 16px;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-                url("imaganes/elige.png");
+    padding: 0px 6px;
     background-size:cover;
     background-position: center;
     color: #fff;
@@ -350,7 +328,6 @@ a {
 
 
 .carruseles__titulo {
-    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -362,12 +339,10 @@ a {
 .carruseles__contenedor {
     padding: 160px;
     display: flex;
-    gap: 500px;
+    gap: 430px;
     justify-content: center;
     flex-wrap: wrap;
 }
-
-
 .carrusel {
     width: 320px;
     padding: 16px;
@@ -391,21 +366,28 @@ a {
     margin-bottom: 12px;
 }
 
-
 .carrusel__imagenes {
+    margin-top: 12px;
+    width: 100%;
+    height: 100%;
     display: flex;
-    width: 150%;
-    animation: slide 8s infinite linear;
+    justify-content: center;
 }
 
-.carrusel__imagenes img {
+.video1{
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
 }
+
+.video2{
+    width: 100%;
+    height: 100%;
+}
+
 
 
 .carrusel__boton {
+    margin-top: 12px;
     display: inline-block;
     padding: 10px 14px;
     border-radius: 10px;
@@ -418,9 +400,6 @@ a {
 .bar {
     min-height: 100vh;
     padding: 40px 16px;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-        url("imaganes/bar\ dentro.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -432,7 +411,7 @@ a {
 .bar__contenido {
     max-width: 750px;
     background: rgba(20,20,20,0.7);
-    padding: 30px;
+    padding: 10px;
     border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.2);
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
@@ -441,6 +420,7 @@ a {
 .bar__titulo {
     font-size: 2rem;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .bar__texto {
@@ -451,14 +431,16 @@ a {
 
 .bar__pregunta {
     margin-top: 25px;
-    font-size: 1.3rem;
+    text-align: center;
+
 }
 
 .bar__opciones {
     display: flex;
-    gap: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
 }
 
 .bar__opcion {
@@ -468,11 +450,12 @@ a {
     background: rgba(40,40,40,0.7);
     padding: 16px;
     border-radius: 16px;
-    width: 45%;
+    width: 30%;
     text-decoration: none;
     color: white;
     border: 1px solid rgba(255,255,255,0.2);
     transition: transform .2s ease;
+    gap: 10px;
 }
 
 .bar__opcion:hover {
@@ -488,9 +471,6 @@ a {
 .muerte {
     min-height: 100vh;
     padding: 40px 16px;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-        url("imaganes/tumba.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -504,12 +484,13 @@ a {
 
 .muerte__contenido {
     max-width: 750px;
-    background: rgba(74, 74, 74, 0.884);
+    background: rgba(201, 199, 199, 0.371);
     padding: 30px;
     border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.2);
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     text-align: center;
+    opacity: 65%;
 }
 
 .muerte__titulo {
@@ -555,22 +536,17 @@ a {
     font-size: 1.1rem;
 }
 
-.muerte__boton--reintentar {
+.muerte__botonReintentar {
     background: rgba(106, 242, 69, 0.884);
 }
 
-.muerte__boton--rendir {
+.muerte__botonRendir {
     background: rgba(221, 14, 52, 0.884);
 }
 
 .botella {
-   min-height: 100vh;
+    min-height: 100vh;
     padding: 40px 16px;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-        url("imaganes/escapada.png");
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -580,21 +556,16 @@ a {
 }
 
 
-.botella-box {
+.botellaBox {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-
-
-    background-color: rgba(0,0,0,0.4);
-
-    color: white;
     border-radius: 15px;
     text-align: center;
 }
 
 
-.botella-box__titulo {
+.botellaBox__titulo {
     background-color: rgba(0,0,0,0.5);   
     padding: 15px;
     border-radius: 10px;
@@ -602,7 +573,7 @@ a {
 }
 
 
-.botella-box__narrativa {
+.botellaBox__narrativa {
     background-color: rgba(0,0,0,0.45); 
     padding: 20px;
     border-radius: 10px;
@@ -611,19 +582,19 @@ a {
 }
 
 
-.botella-box__accion {
+.botellaBox__accion {
     background-color: rgba(0,0,0,0.5);  
     padding: 20px;
     border-radius: 10px;
 }
 
-.botella-box__advertencia {
+.botellaBox__advertencia {
     margin-bottom: 15px;
     font-size: 1.1rem;
 }
 
 
-.botella-box__boton {
+.botellaBox__boton {
     display: inline-block;
     padding: 10px 25px;
     background-color: rgba(50,50,50,0.7);
@@ -640,63 +611,102 @@ a {
 }
 
 
-.empenos {
-    min-height: 100vh;
-    padding: 40px 16px;
-    background-image:
-        url("imaganes/anciano.png");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
-
-.empenos__box {
-    width: 260px;                            
+.empenios__box {
+    width: 350px;                       
     padding: 12px 14px;                        
     background-color: rgba(0,0,0,0.55);       
     border-radius: 12px;
-
     position: absolute;
     top: 30px;
-    right: 30px;
-
+    left: 50px;
     font-size: 0.9rem;                        
 }
 
-.empenos__titulo {
+.empenios__titulo {
     font-size: 1.1rem;
     margin-bottom: 8px;
+    margin-top: 50px;
+    color: rgb(158, 219, 158);
 }
 
-.empenos__texto {
+.empenios__texto {
     margin-bottom: 6px;
-    line-height: 1.4;
+    font-size: 20px;
+    margin-top: 40px;
+
 }
 
-
-.empenos__boton-contenedor {
-    position: absolute;
-    bottom: 30px;          
+.empenios__botonContenedor {
+    position: fixed;
+    bottom: 20px; 
     left: 50%;
     transform: translateX(-50%);
-}
-
-.empenos__boton {
-    padding: 8px 18px;                           
-    background-color: rgba(0,0,0,0.7);
-    color: white;
+    background: rgba(141, 89, 17, 0.984);
+    padding: 10px 18px;
+    border-radius: 10px;
+    color: #0f172a;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 999px;                        
-    font-size: 1rem;
-    transition: color 0.2s ease;
+    z-index: 999;
 }
 
-.empenos__boton:hover {
-    color: #ffe600;    
+
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+    filter: brightness(0.5);
+}
+
+
+.panel {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.panel__container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.panel__titulo {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.panel__box {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+}
+
+.panel__boton {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #f1c40f;
+    color: #000;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.panel__boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #f1c40f;
 }

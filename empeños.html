@@ -7,35 +7,38 @@
     <link rel="stylesheet" href="stylefinal.css">
 </head>
 <body>
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="imaganes/empeños.mp4" type="video/mp4">
+    </video>
 
 <section class="empenios">
 
-    <div class="empenos__box">
-        <h2 class="empenos__titulo">Acto · Tienda de Empeños</h2>
+    <div class="empenios__box">
+        <h2 class="empenios__titulo">Acto · Tienda de Empeños</h2>
 
-        <p class="empenos__texto">
+        <p class="empenios__texto">
             Entras en una misteriosa tienda llena de relojes antiguos.  
             El anciano te observa con una sonrisa extraña mientras sostiene  
             un reloj de bolsillo que parece brillar con energía temporal.
         </p>
 
-        <p class="empenos__texto">
+        <p class="empenios__texto">
     Al no tener dinero para comprar las piezas, te propone jugar a un juego 
     el cual es muy famoso en la zona. Si ganabas te daría las piezas,
     si perdias tendrías que trabajar en la tienda durante un mes.
         </p>
     </div>
 
-    <div class="empenos__botonContenedor">
-        <a href="acto-siguiente.html" class="empenos__boton">Siguiente</a>
+    <div class="empenios__botonContenedor">
+        <a href="laboratorio.html" class="empenios__boton">Siguiente</a>
     </div>
 
 </section>
-
+</div>
 </body>
 <footer>
     <audio id="sonido" src="sonidos/sonido1.mp3" loop></audio>
-     <script>
+    <script>
 
         document.addEventListener("click", function iniciarAudio() {
             const audio = document.getElementById("sonida");

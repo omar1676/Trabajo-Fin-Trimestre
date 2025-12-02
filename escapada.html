@@ -8,14 +8,18 @@
 </head>
 <body class="botella">
 
-<section class="botella-box">
+<section class="botellaBox">
 
+    <div> <video id="bg-video" autoplay muted loop playsinline>
+        <source src="imaganes/escapada.mp4" type="video/mp4">
+        Tu navegador no soporta el vídeo HTML5.
+    </video>
 
-    <div class="botella-box__titulo">
+    <div class="botellaBox__titulo">
         <h1>Acto 3 · La Botella Salvadora</h1>
     </div>
 
-    <div class="botella-box__narrativa">
+    <div class="botellaBox__narrativa">
         <p>
             Agarras una botella de la barra y la rompes contra la mesa.  
             El sonido sorprende a todos y crea unos segundos de caos.
@@ -27,19 +31,19 @@
         </p>
     </div>
 
-    <div class="botella-box__accion">
-        <p class="botella-box__advertencia">
+    <div class="botellaBox__accion">
+        <p class="botellaBox__advertencia">
             <strong>Has escapado... pero el peligro no ha terminado.</strong>
         </p>
 
-        <a href="empeños.html" class="botella-box__boton">Continuar</a>
+        <a href="empeños.html" class="botellaBox__boton">Continuar</a>
     </div>
 
 </section>
-
+</div>
 <footer>
     <audio id="huida" src="sonidos/huida.mp3" loop></audio>
-     <script>
+    <script>
 
         document.addEventListener("click", function iniciarAudio() {
             const audio = document.getElementById("huida");

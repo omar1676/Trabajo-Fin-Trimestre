@@ -9,6 +9,10 @@
 <body>
 
 <section class="carruseles">
+    <div> <video id="bg-video" autoplay muted loop playsinline>
+        <source src="imaganes/elige.mp4" type="video/mp4">
+
+    </video>
 
     <h1 class="carruseles__titulo">Acto 2.1 · ¿Dónde irás?</h1>
     <p class="carruseles__texto">
@@ -22,7 +26,8 @@
             <h2 class="carrusel__titulo">El Bar</h2>
             <div class="carrusel__ventana">
                 <div class="carrusel__imagenes">
-                    <img src="imaganes/bar.png" alt="Escaparate de un bar">
+                    <video id="bg-video1" autoplay muted loop playsinline>
+                    <source src="imaganes/entradaBar.mp4" type="video/mp4">
                 </div>
             </div>
             <a class="carrusel__boton" href="bar.html">Entrar al Bar</a>
@@ -32,7 +37,8 @@
             <h2 class="carrusel__titulo">Tienda de Empeños</h2>
             <div class="carrusel__ventana">
                 <div class="carrusel__imagenes">
-                    <img src="imaganes/empeños.png" alt="Escaparate de una tienda de empeños">
+                    <video id="bg-video2" autoplay muted loop playsinline>
+        <source src="imaganes/entradaEmpeños.mp4" type="video/mp4">
                 </div>
             </div>
             <a class="carrusel__boton" href="empeños.html">Entrar a la Tienda</a>
@@ -43,6 +49,7 @@
 </section>
 
 </body>
+</div>
 <footer><audio id="pueblo" src="sonidos/pueblo.mp3" loop></audio>
     <script>
 
@@ -57,5 +64,6 @@
             document.removeEventListener("click", iniciarAudio);
         });
     </script>
+</footer>
 </html>
 

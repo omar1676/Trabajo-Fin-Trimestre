@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio Temporal</title>
+    <link rel="stylesheet" href="stylefinal.css">
+</head>
+<body>
+
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="imaganes/laboratorio.mp4" type="video/mp4">
+    </video>
+
+
+    <section class="panel">
+        <div class="panel__container">
+            <h1 class="panel__titulo">Panel de Estabilidad Temporal</h1>
+
+            <div class="panel__box">
+            <p>
+    El anciano te entrega las piezas para reparar la CRONOS-1 y te presenta a un astrofísico. 
+    Él descubre un fallo grave en el Núcleo de Estabilidad Temporal.
+</p>
+
+<p>
+    Para estabilizar la máquina deberás responder preguntas clave, pero no de esta época: si fallas, podrías quedar atrapado en ese año.
+</p>
+
+<p>
+    Te llevan a un laboratorio donde un panel azul se activa al detectarte y al meterte en la máquina empieza a parpader, el amigo asiente y te dice que es hora de viaja, das las gracias y empiezas tu aventura a casa.
+</p></p>
+            </div>
+<div class="panel__boton">
+        <a href="laboratorio.html" class="empenios__boton">Siguiente</a>
+    </div>
+        </div>
+    </section>
+
+</body>
+<footer><audio id="pueblo" src="sonidos/bla bla bla.mp3" loop></audio>
+    <script>
+
+        document.addEventListener("click", function iniciarAudio() {
+            const audio = document.getElementById("pueblo");
+            if (audio) {
+                audio.play().catch(err => {
+                    console.log("No se pudo reproducir el audio:", err);
+                });
+            }
+
+            document.removeEventListener("click", iniciarAudio);
+        });
+    </script>
+</footer>
+</html>
