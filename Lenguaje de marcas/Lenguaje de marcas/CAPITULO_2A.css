@@ -1,0 +1,54 @@
+.quiz--dinosaurs-bg {
+    background-image: url("Imagenes/dinosaurios.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+}
+
+.quiz__header {
+    background-color: black;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 26px;
+    text-align: center;
+    height: auto;
+    border-radius: 5px;
+}
+
+.quiz__options {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.quiz__option--wrong {
+    grid-area: 1/ 2 / 4 / 2;
+    text-align: center;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 26px;
+}
+.quiz__option--correct {
+    grid-area: 1 / 4 / 2 / 6;
+    text-align: center;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 26px;
+}
+
+.texto{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 460px;
+    height: 20px;
+    border-radius: 20px;
+}

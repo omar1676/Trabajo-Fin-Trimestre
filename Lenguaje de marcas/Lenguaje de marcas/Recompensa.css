@@ -1,0 +1,45 @@
+.quiz--recompensa-bg {
+    background-image: url("Imagenes/Cofre.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+}
+
+.quiz--.quiz--recompensa-objeto{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+recompensa-objeto-objeto
+{
+    grid-area: 2 / 3 / 5 / 5;
+}
+
+.quiz--recompensa-objeto-texto{
+    grid-area: 1 / 1 / 2 / 7;
+    background-color: black;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 26px;
+    text-align: center;
+    height: auto;
+    border-radius: 5px;
+    width: 1891px;
+}
+
+.texto1{
+    font-size: 40px;
+}
+
+.quiz--recompensa-objeto-img{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: end;
+    align-self: end;
+}
