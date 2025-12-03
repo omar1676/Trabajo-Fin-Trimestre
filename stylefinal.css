@@ -893,7 +893,6 @@ a {
     overflow-y: hidden;
 }
 
-/* ---- HEADER ---- */
 .R-header {
     width: 100%;
     padding: 25px 15px;
@@ -908,7 +907,6 @@ a {
     font-size: 22px;
 }
 
-/* ---- MAIN ---- */
 .R-main {
     flex: 1;
     display: flex;
@@ -918,7 +916,7 @@ a {
     z-index: 1;
 }
 
-/* ---- CONTENEDOR DE OPCIONES ---- */
+
 .R-main__contenedor {
     width: 260px;
     display: grid;
@@ -928,7 +926,7 @@ a {
     text-align: center;
 }
 
-/* ---- OPCIONES ---- */
+
 .R-option {
     background: rgba(0, 0, 0, 0.55);
     padding: 12px;
@@ -936,20 +934,18 @@ a {
     transition: 0.25s ease;
 }
 
-/* enlaces dentro de opciones */
+
 .R-option a {
     text-decoration: none;
     color: white;
 }
 
-/* hover de las opciones */
 .R-option:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-3px);
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
 }
 
-/* Hover del texto */
 .R-option a:hover {
     text-shadow: 1px 1px 20px yellow;
     font-size: 120%;
