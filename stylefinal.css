@@ -988,9 +988,10 @@ html {
 }
 
 #carousel-item--color{
-    color: rgb(0, 4, 255);
-    text-shadow: 1px 1px 15px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 10px rgb(255, 196, 0);
     font-size: 125%;
+    font-weight: bold;
     text-decoration: none;
 }
 
