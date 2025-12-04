@@ -8,27 +8,33 @@
     <link rel="stylesheet" href="stylefinal.css">
 </head>
 
-<body class="quizDinosaursBg">
-   <div> <video id="bg-video" autoplay muted loop playsinline>
-        <source class="video" src="imaganes/dinosaurios.mp4" type="video/mp4">
+<body class="R-quizDinos">
 
+
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="imaganes/dinosaurios.mp4" type="video/mp4">
     </video>
-    <header class="quiz__header">
-        <div class="quiz__headerQuestion">
-            <p>¿Hace cuántos años se extinguieron los dinosaurios?</p>
-        </div>
-    </header>
 
-    <div class="quiz__options">
-        <div class="quiz__option quiz__optionWrong">
-            <a href="tumba.html">Hace 93 millones de años</a>
-        </div>
+    <main class="R-quiz__wrapper">
+       
+        <header class="R-quiz__header">
+            <div class="R-quiz__headerQuestion">
+                <p>¿Hace cuántos años se extinguieron los dinosaurios?</p>
+            </div>
+        </header>
 
-        <div class="quiz__option quiz__optionCorrect">
-            <a href="CAPITULO_2B.html">Hace 66 millones de años</a>
-        </div>
-    </div>
-</div>
+       
+        <section class="R-quiz__options">
+            <a href="tumba.html" class="R-quiz__option R-quiz__option--wrong">
+                <span>Hace 93 millones de años</span>
+            </a>
+
+            <a href="CAPITULO_2B.html" class="R-quiz__option R-quiz__option--correct">
+                <span>Hace 66 millones de años</span>
+            </a>
+        </section>
+    </main>
+
 </body>
 
 </html>
