@@ -1,0 +1,50 @@
+body{
+    background-image: url(maquinamala.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.header__title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    flex-direction: column;
+}
+.header__text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.button{
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    background: rgba(4, 109, 0, 0.611);
+    color: #ffffff;
+    border: 2px solid #008707;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    transition: 0.25s;
+    margin-top: 500px;
+    margin-left: 1250px;
+    width: 10%;
+}
