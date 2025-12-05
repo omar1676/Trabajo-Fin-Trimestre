@@ -1,0 +1,158 @@
+1. ¿Qué es este proyecto?
+
+CRONOS-1 es una historia interactiva donde el jugador va pasando por distintas páginas HTML y va tomando decisiones.
+Cada decisión lleva a un camino diferente y puede terminar en:
+
+un final bueno,
+
+uno regular,
+
+o un final malo.
+
+El jugador viaja por el tiempo y tiene que reparar una máquina que funciona mal.
+
+2. Objetivo del juego
+
+El objetivo principal es volver a la actualidad reparando la máquina del tiempo.
+Para conseguirlo, el jugador debe:
+
+leer la historia,
+
+tomar decisiones,
+
+responder preguntas de historia,
+
+y sobrevivir a las diferentes situaciones.
+
+Si se contesta mal, se llega a la página de muerte.
+
+3. Lenguajes usados
+
+El proyecto se ha hecho únicamente con:
+
+HTML  estructura de cada página
+
+CSS  diseño, colores, fondos, vídeos de fondo, estilos
+
+JavaScript básico 
+
+gestionar la barra de progreso,
+
+activar sonidos,
+
+elegir aleatoriamente un final.
+
+También se usa Bootstrap en una parte para un carrusel.
+
+Todo está al nivel de lo que se aprende en el primer trimestre de DAM.
+
+4. ¿Cómo está organizado el juego?
+
+El juego está dividido en páginas HTML que representan actos, rutas o preguntas.
+
+Introducción
+
+Explica la historia inicial y te permite empezar.
+
+Actos del juego
+
+Cada acto es una parte de la aventura:
+
+Acto 1 → Primer salto temporal y descripción del viaje (viaje.html)
+
+Acto 2 → Revisión de la máquina y elección entre dos pueblos (revision.html)
+
+Acto 3 → Bar, pelea, huida, tienda de empeños…
+
+Rutas
+
+El jugador entra en diferentes rutas:
+
+Ruta A Edad Media → pregunta histórica
+
+Ruta B Grecia Antigua → carrusel con emperadores
+
+Ruta C → barra de progreso que decide un final al azar
+
+Cada ruta lleva a otras páginas según la elección.
+
+5. Preguntas del juego
+
+El jugador debe responder preguntas sencillas de historia:
+
+Egipto
+
+Dinosaurios
+
+Edad Media
+
+Grecia
+
+Si falla, va a tumba.html, donde aparece un mensaje de que ha muerto.
+
+Este sistema está hecho solo con enlaces entre archivos HTML.
+
+6. Escenas especiales
+
+El proyecto tiene páginas más narrativas, como:
+
+El bar → decidir cómo defenderte
+
+La tienda de empeños → conseguir piezas
+
+El laboratorio → revisar CRONOS-1
+
+La escapada → si decides usar la botella
+
+También hay vídeos y sonidos de fondo.
+
+7. Finales del juego
+
+El juego tiene varios finales, cada uno en una página distinta:
+
+Final Bueno
+
+Final Bueno Alternativo
+
+Final Medio
+
+Final Medio 2
+
+Final Malo
+
+El final depende de las decisiones, de las respuestas y en un caso de un sistema de azar.
+
+8. Recursos multimedia
+
+El juego incluye:
+
+Vídeos de fondo (intro, rutas, pueblos, bar, etc.)
+
+Imágenes (faraones, griegos, personajes…)
+
+Sonidos en loop que se activan al hacer clic
+
+Efectos visuales como barra de progreso y spinner
+
+Todo esto hace que la historia sea más visual y entretenida.
+
+9. Cómo se juega
+
+Abrir el archivo “htm introduccion.html” en el navegador.
+
+Elegir opciones y avanzar por las páginas.
+
+Si mueres, puedes volver a intentarlo.
+
+Llegar a uno de los finales.
+
+No necesita instalar nada.
+
+10. Autores
+
+El juego incluye una página de créditos con los creadores del proyecto.
+
+11. Estado del proyecto
+
+El proyecto está completo y funcional.
+Todas las páginas están conectadas entre sí y se puede llegar a cualquier final.
