@@ -1047,7 +1047,6 @@ html {
     margin: 20px;
     border-radius: 20px;
 }
-<<<<<<< HEAD
 
 .section {
      width: 100%;
@@ -1068,19 +1067,6 @@ html {
 
     font-family: 'Times New Roman', serif;
     font-size: 20px;
-=======
-.R__section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    margin-top: 100px;
->>>>>>> bc64d2d753b5820c777f31cf574a2762a63a8497
 }
 .R__sectionContainer{
     display: flex;
@@ -1112,3 +1098,130 @@ html {
 #progress--height .progress-bar {
     animation: fill-bar 5s linear forwards;
 }
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at center, #0b0f29 0%, #000 90%);
+    background-image: url("imaganes/maquinabuena.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.finalRetorno {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+.finalRetorno__titulo {
+    font-size: 3rem;
+    color: #c7f7ff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px #6ff;
+    margin-bottom: 20px;
+}
+
+
+.finalRetorno__texto {
+    font-size: 1.2rem;
+    color: #e6faff;
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.finalRetorno__boton {
+    padding: 14px 36px;
+    border-radius: 6px;
+    background: #0af2ff;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0af2ff, 0 0 20px #0af2ff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.finalRetorno__boton:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 15px #6ff, 0 0 30px #6ff;
+
+}
+
+
+.finalXtartBody {
+    margin: 0;
+    height: 100vh;
+    background-image: url("imaganes/xtartalcorcon.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.finalXtart {
+    max-width: 900px;
+    width: 90%;
+    padding: 32px 24px;
+    border-radius: 18px;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: #f9fafb;
+    text-align: center;
+}
+
+.finalXtart__titulo {
+    font-size: 2.4rem;
+    margin-bottom: 18px;
+}
+
+.finalXtart__texto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+
+.finalXtart__boton {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 999px;
+
+    background: #ffffff;
+    color: #111827;
+    border: none;
+
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.finalXtart__boton:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+}
+
