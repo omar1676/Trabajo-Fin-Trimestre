@@ -1,5 +1,5 @@
 body{
-    background-image: url(maquinabuena.png);
+    background-image: url(finalmedio2.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -11,12 +11,11 @@ body{
 .header{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
 
-.header__title{
+.header{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: aliceblue;
     display: flex;
@@ -39,12 +38,13 @@ body{
     text-decoration: none;
     padding: 15px 35px;
     font-size: 18px;
-    background: rgba(0, 0, 0, 0.611);
-    color: #00edf1;
-    border: 2px solid #00ffee;
+    background: rgba(0, 7, 110, 0.611);
+    color: #ffffff;
+    border: 2px solid #0300a2;
     border-radius: 10px;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     transition: 0.25s;
     margin-top: 500px;
-    width: 25%;
-}
+    margin-left: 1250px;
+    width: 10%;
+}   
