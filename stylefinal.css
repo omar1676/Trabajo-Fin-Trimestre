@@ -984,6 +984,8 @@ a {
     font-size: 120%;
 }
 
+
+
 html {
     width: 100%;
     height: 100%;
@@ -1048,14 +1050,13 @@ html {
     border-radius: 20px;
 }
 
-.section {
-     width: 100%;
+.R__section {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(0, 0, 0, 0.6);
     color: white;
 
     text-align: center;
@@ -1068,6 +1069,7 @@ html {
     font-family: 'Times New Roman', serif;
     font-size: 20px;
 }
+
 .R__sectionContainer{
     display: flex;
     justify-content: center;
@@ -1166,7 +1168,7 @@ body {
 .finalXtartBody {
     margin: 0;
     height: 100vh;
-    background-image: url("imaganes/xtartalcorcon.png");
+    background-image: url("imaganes/titulo.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1223,5 +1225,255 @@ body {
     background: #e5e7eb;
     transform: translateY(-2px);
     box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+}
+
+
+.finalMaloBody {
+    margin: 0;
+    height: 100vh;
+    background-image: url("imaganes/maquinamala.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.finalMalo {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px 30px;
+    border-radius: 18px;
+    text-align: center;
+    max-width: 800px;
+    width: 80%;
+    color: white;
+}
+
+.finalMalo__titulo {
+    font-size: 2.6rem;
+    color: #ff4c4c;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px #d10000;
+}
+
+.finalMalo__texto {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.finalMalo__boton {
+    display: inline-block;
+    padding: 14px 32px;
+    background: rgba(255, 0, 0, 0.8);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    border: 2px solid rgba(255, 0, 0, 0.9);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.finalMalo__boton:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 14px red;
+}
+
+.finalMedioBody {
+    margin: 0;
+    height: 100vh;
+
+    background-image: url("imaganes/maquinabuena.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.finalMedio {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px 30px;
+    border-radius: 18px;
+    width: 80%;
+    max-width: 850px;
+    color: #e8faff;
+}
+
+.finalMedio__titulo {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+.finalMedio__texto {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.finalMedio__boton {
+    display: inline-block;
+    padding: 14px 36px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 10px;
+
+    font-size: 1.2rem;
+    color: #00edf1;
+    border: 2px solid #00ffee;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.finalMedio__boton:hover {
+    background: rgba(0, 0, 0, 0.85);
+    color: #a6ffff;
+    transform: scale(1.05);
+}
+
+.finalMedio2Body {
+    margin: 0;
+    height: 100vh;
+
+    background-image: url("imaganes/finalmedio2.png"); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.finalMedio2 {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px 35px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 850px;
+    text-align: center;
+    color: white;
+}
+
+.finalMedio2__titulo {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    color: #ff4444;
+    text-shadow: 0 0 12px #d10000;
+}
+
+.finalMedio2__texto {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.finalMedio2__boton {
+    display: inline-block;
+    padding: 14px 36px;
+    text-decoration: none;
+
+    background: rgba(0, 7, 110, 0.7);
+    color: #ffffff;
+    border: 2px solid #0300a2;
+    border-radius: 12px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    transition: 0.2s ease;
+}
+
+.finalMedio2__boton:hover {
+    background: rgba(0, 7, 110, 0.9);
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 30, 255, 0.8);
+}
+
+.creditosBody {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("imaganes/introalvaro.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.creditos {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.creditos__titulo {
+    font-size: 2.8rem;
+    text-shadow: 0 0 10px black;
+}
+
+.creditos__subtitulo {
+    font-size: 1.5rem;
+}
+
+.creditos__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 26px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.creditos__card {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.creditos__card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.6);
+}
+
+.creditos__img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.7);
+    margin-bottom: 12px;
+}
+
+.creditos__nombre {
+    margin: 10px 0;
+    font-size: 1.3rem;
+}
+
+.creditos__descripcion {
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
